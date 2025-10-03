@@ -1,0 +1,81 @@
+\let\nofiles\relax % This is because res says to not emit aux files,
+                   % but lastpage needs aux files.
+\documentclass[%
+    margin,
+    line,
+]{res}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{fourier-orns}
+\usepackage{amsmath,amssymb}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{etaremune}
+
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\voffset -25pt
+%\topmargin -.2in
+\headsep 25pt
+\textwidth=6.0in
+\textheight=9.4in
+\itemsep=0in
+\parsep=0in
+
+% Headings
+\pagestyle{fancy}
+\lhead{Fabian Gittins --- Publication List (as of \today)}
+\chead{}
+\rhead{\thepage\ of \pageref*{LastPage}}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0.4pt}
+
+% Give hyperref some metadata
+\hypersetup{%
+    pdftitle={Fabian Gittins — Curriculum Vitae (CV)},
+    pdfauthor={Fabian Gittins},
+    pdfsubject={Fabian Gittins's academic curriculum vitae (CV)},
+    pdfkeywords={physics, gravity, general relativity, neutron stars,
+    gravitational waves, asteroseismology}
+}
+
+% I want small caps for the section style
+\def\sectionfont{\sc}
+
+% Generate a PDF TOC
+\let\oldsection\section
+\def\section#1{\oldsection{#1}%
+\phantomsection%
+\addcontentsline{toc}{section}{#1}%
+}
+
+% The above seems to screw up the spacing for sections that start with lists...
+\newcommand{\secstartswithlist}{\leavevmode \vspace{-\baselineskip}}
+
+\begin{document}
+
+\newcommand{\myname}{Fabian Gittins --- Publications}
+\newlength{\mynamewidth}
+\settowidth{\mynamewidth}{\namefont\myname}
+
+\name{\hspace*{0.5\textwidth}\hspace{-0.5\mynamewidth} \myname \vspace*{.1in}}
+% On the first page, have no header.
+\thispagestyle{empty}
+
+\begin{resume}
+
+\input{ContactContent.tex}
+
+\input{PubsContent.tex}
+
+\end{resume}
+\end{document}
+
+% Local Variables:
+% mode: latex
+% End:

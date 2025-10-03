@@ -1,0 +1,8 @@
+*.aux
+*.log
+*.out
+*Notes.bib
+*.rel
+*.blg
+*.gz
+*.pdf

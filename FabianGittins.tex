@@ -1,0 +1,371 @@
+\let\nofiles\relax % This is because res says to not emit aux files,
+                   % but lastpage needs aux files.
+\documentclass[%
+    margin,
+    line,
+]{res}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{fourier-orns}
+\usepackage{amsmath,amssymb}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{etaremune}
+\usepackage[normalem]{ulem}
+\usepackage[style=iso]{datetime2}
+
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\voffset -25pt
+%\topmargin -.2in
+\headsep 25pt
+\textwidth=6.0in
+\textheight=8.9in
+\itemsep=0in
+\parsep=0in
+
+% Headings
+\pagestyle{fancy}
+\lhead{Fabian Gittins --- Curriculum Vitae (as of \today)}
+\chead{}
+\rhead{\thepage\ of \pageref*{LastPage}}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0.4pt}
+
+% Give hyperref some metadata
+\hypersetup{%
+    pdftitle={Fabian Gittins — Curriculum Vitae (CV)},
+    pdfauthor={Fabian Gittins},
+    pdfsubject={Fabian Gittins's academic curriculum vitae (CV)},
+    pdfkeywords={physics, gravity, general relativity, neutron stars,
+    gravitational waves, asteroseismology}
+}
+
+% I want small caps for the section style
+\def\sectionfont{\sc}
+
+% Generate a PDF TOC
+\let\oldsection\section
+\def\section#1{\oldsection{#1}%
+\phantomsection%
+\addcontentsline{toc}{section}{#1}%
+}
+
+% The above seems to screw up the spacing for sections that start with lists...
+\newcommand{\secstartswithlist}{\leavevmode \vspace{-\baselineskip}}
+
+\begin{document}
+
+\newcommand{\myname}{Fabian Gittins}
+\newlength{\mynamewidth}
+\settowidth{\mynamewidth}{\namefont\myname}
+
+\name{\hspace*{0.5\textwidth}\hspace{-0.5\mynamewidth} \myname \vspace*{.1in}}
+% On the first page, have no header.
+\thispagestyle{empty}
+
+\begin{resume}
+
+\input{ContactContent.tex}
+
+\section{Citizenship}
+
+United Kingdom
+
+\section{Education}
+
+\textbf{PhD, Mathematics,} University of Southampton, UK
+\hfill \textbf{Sep. 2021}\\
+\vspace*{-.1in}
+\begin{itemize}
+    \item[ ] Advisor: Prof\ Nils Andersson
+    \item[ ] Thesis title:
+\href{https://eprints.soton.ac.uk/452900/}%
+{\textit{Gravitational waves from deformed neutron stars: mountains and tides}}
+\end{itemize}
+
+\textbf{MSci, Physics,} University of Birmingham, UK
+\hfill \textbf{Jul. 2017}\\
+\vspace*{-.1in}
+\begin{itemize}
+    \item[ ] Grade: First class honours
+    \item[ ] Undergraduate Master's degree with focus on theoretical physics
+\end{itemize}
+
+\section{Research Experience}
+
+\textbf{Marie Sk{\l}odowska-Curie Postdoctoral Fellow,} Utrecht University, NL
+\hfill \textbf{Oct. 2024--Present}\\
+\\
+\textbf{Research Fellow,} University of Southampton, UK
+\hfill \textbf{Oct. 2021--Sep. 2024}\\
+\\
+\textbf{PhD Researcher,} University of Southampton, UK
+\hfill \textbf{Sep. 2017--Sep. 2024}\\
+\\
+\textbf{Undergraduate Researcher,} University of Birmingham, UK
+\hfill \textbf{Sep. 2016--Mar. 2017}\\
+\\
+\textbf{Undergraduate Researcher,} University of Birmingham, UK
+\hfill \textbf{Jan.--May 2016}\\
+\\
+\textbf{Undergraduate Research Intern,} University of Birmingham, UK
+\hfill \textbf{Jun.--Sep. 2015}\\
+
+% Added to improve page breaks
+\vspace{-1em}
+
+\section{Research Interests}
+
+Relativistic astrophysics, fluid dynamics and dense nuclear matter. Probing
+the extreme physics of neutron stars with gravitational waves.
+
+\section{Grants and Awards}
+
+\textbf{Marie Sk{\l}odowska-Curie Postdoctoral Fellow,} European Union
+\hfill \textbf{Oct. 2024--Sep. 2026}\vspace*{.05in}
+\begin{itemize}
+    \item[ ] PI of
+    \href{https://doi.org/10.3030/101151301}{\textit{DynTideEOS}}; €203,464
+\end{itemize}
+\textbf{Gravitational Physics Thesis Prize,} Institute of Physics, UK
+\hfill \textbf{2021}\\
+\\
+\textbf{Best Publication in Gravitational Physics,}
+University of Southampton, UK
+\hfill \textbf{2021}\\
+\\
+\textbf{Physics Scholarship,} University of Birmingham, UK
+\hfill \textbf{2013}\\
+
+\input{TalksContent.tex}
+
+% Added to improve page breaks
+%\vspace{-1em}
+
+\section{Teaching Experience}
+
+\textbf{Instructor,} University of Southampton, UK
+\vspace*{.05in}
+\begin{itemize}
+    \item[ ] MATH1007/1009, Mathematical Methods for Physical Scientists
+\hfill \textbf{Feb.--May 2024}
+\end{itemize}
+%\newpage{}
+\textbf{Guest Lecturer,} University of Southampton, UK
+\vspace*{.05in}
+\begin{itemize}
+    \item[ ] MATH3072, Advanced Fluid Dynamics
+\hfill \textbf{Oct. 2022, Oct. 2023}
+    \item[ ] MATH3006, Relativity, Black Holes and Cosmology
+\hfill \textbf{Apr. 2022}
+\end{itemize}
+\textbf{Teaching Assistant,} University of Southampton, UK
+\hfill \textbf{Oct. 2017--May 2021}
+\begin{itemize}
+    \item[ ] MATH1054/1055, Mathematics for Engineering and the Environment
+    \item[ ] MATH1057, Dynamics and Relativity
+    \item[ ] MATH1058, Operational Research I and Mathematical Computing
+    \item[ ] MATH2045, Vector Calculus and Complex Variable Theory
+    \item[ ] MATH3018, Numerical Methods
+    \item[ ] MATH3087, Maths and Your Future
+\end{itemize}
+\textbf{Teaching Assistant,} King Edward's School, Birmingham, UK
+\hfill \textbf{Jan.--Apr. 2016}
+\vspace*{.05in}
+\begin{itemize}
+    \item[ ] Physics (11--16 yr)
+\end{itemize}
+
+\section{Mentoring and Supervision}
+
+\textbf{PhD student mentoring}
+\begin{itemize}
+    \item[] Thibeau Wouters, Utrecht University, NL
+    \hfill \textbf{Oct. 2024--Present}
+    \item[] Rahime Matur, University of Southampton, UK
+    \hfill \textbf{Jan. 2023--Sep. 2024}
+    \item[] Rhys Counsell, University of Southampton, UK
+    \hfill \textbf{Sep. 2021--Sep. 2024}
+    \item[] Shanshan Yin, University of Southampton, UK
+    \hfill \textbf{Sep. 2021--Sep. 2024}
+    \item[] Thomas Celora, University of Southampton, UK
+    \hfill \textbf{Sep. 2021--Sep. 2023}
+    \begin{itemize}
+    \vspace{-.05in}
+        \item[] Now postdoc at Institute of Space Sciences, Barcelona, ES
+    \end{itemize}
+\end{itemize}
+\textbf{Master's student supervision}
+\begin{itemize}
+    \item[] Tobie Walraven, Utrecht University, NL
+    \hfill \textbf{Sep. 2025--Present}
+\end{itemize}
+
+%
+%\newpage{}
+
+\section{Professional Activities, Outreach and Service}
+
+\textbf{Virgo Collaboration, Member} \hfill \textbf{Oct. 2024--Present} \\
+\textbf{Cosmic Explorer Consortium, Member} \hfill \textbf{May 2024--Present} \\
+\textbf{Einstein Telescope Collaboration, Member}
+\hfill \textbf{Sep. 2023--Present}
+
+\textbf{International Astronomical Union, Junior member}
+\hfill \textbf{May 2023--Present} \\
+\textbf{European Astronomical Society, Member}
+\hfill \textbf{Nov. 2024--Present} \\
+\textbf{Royal Astronomical Society, Elected fellow}
+\hfill \textbf{Jul. 2021--Present} \\
+\textbf{International Society on General Relativity and Gravitation,} \\
+\textbf{Lifetime member} \hfill \textbf{May 2021--Present} \\
+\textbf{Institute of Physics, Member} \hfill \textbf{Apr. 2021--Present}
+\begin{itemize}
+    \item[] Gravitational Physics Group, Committee member
+    \hfill \textbf{Oct. 2021--Sep. 2025}
+\end{itemize}
+
+\textbf{Conference organiser}
+\vspace*{.05in}
+\begin{itemize}
+    \item[]
+    \href{https://sites.google.com/view/spins-uk-2024}{SPINS-UK 2024 meeting},
+    University of Southampton
+    \hfill \textbf{10--12 Sep. 2024}\\
+    \hspace*{1em} Local organising committee, $\sim 40$ participants
+    \item[]
+    \href{https://plan.events.mpg.de/event/133}%
+    {Continuous gravitational waves and neutron stars workshop}, \\
+    Albert Einstein Institute, Hannover, DE \hfill \textbf{17--20 Jun. 2024}\\
+    \hspace*{1em} Scientific organising committee, $\sim 50$ participants
+    \item[]
+    \href{https://iop.eventsair.com/gpm2024/}%
+    {Gravitational Physics Annual Meeting},
+    Institute of Physics, UK \hfill \textbf{18 Jan. 2024} \\
+    \hspace*{1em} Scientific organising committee, $\sim 50$ participants
+    \item[]
+    \href{https://sites.google.com/view/britgrav23}{23rd BritGrav Conference},
+    University of Southampton, UK \hfill \textbf{13--14 Apr. 2023} \\
+    \hspace*{1em} Scientific and local organising committee,
+    $\sim 100$ participants
+\end{itemize}
+
+\textbf{Seminar organiser}
+\vspace*{.05in}
+\begin{itemize}
+    \item[] Gravity Seminar, University of Southampton, UK
+    \hfill \textbf{Oct. 2021--Sep. 2024}
+    \item[] Weekly Gravity Reading Group, University of Southampton, UK
+    \hfill \textbf{Jan.--Jul. 2021}
+\end{itemize}
+
+\textbf{Journal referee}
+\vspace*{.05in}\\
+\hspace*{1em}
+Astronomy and Astrophysics,
+Classical and Quantum Gravity,
+Journal of Cosmology and Astroparticle Physics,
+Journal of Physics G,
+Monthly Notices of the Royal Astronomical Society,
+Nature Astronomy,
+Physical Review D,
+Physical Review Letters,
+The Astrophysical Journal
+
+\textbf{Project referee}
+\vspace*{.05in}
+\begin{itemize}
+    \item[ ]
+    Postdoctoral project, University of Namur, BE
+    \hfill \textbf{2025}
+    \item[ ]
+    Open Fellowship, Engineering and Physical Sciences Research Council, UK
+    \hfill \textbf{2024}
+\end{itemize}
+
+\textbf{Outreach}
+\vspace*{.05in}
+\begin{itemize}
+  \item[] Southampton Science and Engineering Festival
+  \hfill \textbf{7 May 2022, 18 Mar. 2023} \\
+  \hspace*{1em} Organised neutron-star exhibit for general public and
+  coordinated team of 10 volunteers
+  \item[] Mathematical Challenge \hfill \textbf{Mar.--Apr. 2020} \\
+  \hspace*{1em} Marked over 200 pupil entries
+  \item[] Maths and Physics Workshop \hfill \textbf{8 Nov. 2017} \\
+  \hspace*{1em} Demonstrated for $\sim 100$ secondary-school pupils
+\end{itemize}
+
+\section{Computer Skills}
+
+Advanced in Julia, Python.
+Intermediate in Bash, C++, \textsc{Mathematica}, MATLAB.
+Intermediate in high-performance computing (HTCondor, Slurm).
+Markup languages: \LaTeX, Markdown.
+
+\textbf{Software---}%
+Most contributions can be found at \url{https://github.com/fgittins}.
+Member of the \textit{Bilby} development team
+(\url{https://github.com/bilby-dev/bilby}).
+Contributor to \textit{SciML} (\url{https://sciml.ai/}),
+in particular \texttt{NonlinearSolve.jl}
+(\url{https://github.com/SciML/NonlinearSolve.jl}).
+Author of \texttt{RealisticSeismology} Julia code
+(\url{https://github.com/fgittins/RealisticSeismology}).
+
+% Twiddle this for spacing
+% \newpage
+
+\ifx\nopubs\undefined
+\input{PubsContent.tex}
+\else
+%
+\fi
+
+%\newpage{}
+
+\section{References}
+
+\vspace*{.05in}
+\parbox{\textwidth}{%
+\textbf{Prof Nils Andersson,} Professor of Applied Mathematics \\
+School of Mathematical Sciences \\
+University of Southampton, \\
+University Road \\
+Southampton, SO17 1BJ \\
+United Kingdom \\
+email: \href{mailto:n.a.andersson@soton.ac.uk}{n.a.andersson@soton.ac.uk} \\
+office phone: \href{tel:+44 23 8059 4551}{+44 23 8059 4551}}
+\par
+\parbox{\textwidth}{%
+\textbf{Prof Chris van den Broeck,} Professor of Physics \\
+Institute of Gravitational and Subatomic Physics \\
+Utrecht University \\
+Princetonplein 1 \\
+3584 CC Utrecht \\
+The Netherlands \\
+email: \href{mailto:c.f.f.vandenbroeck@uu.nl}{c.f.f.vandenbroeck@uu.nl} \\
+office phone: \href{tel:+31 6 25 13 3968}{+31 6 25 13 3968}}
+\par
+\parbox{\textwidth}{%
+\textbf{Dr David Tsang,} Lecturer in Physics \\
+Department of Physics \\
+University of Bath \\
+Claverton Down \\
+Bath, BA2 7AY \\
+United Kingdom \\
+email: \href{mailto:d.tsang@bath.ac.uk}{d.tsang@bath.ac.uk}\\
+office phone: \href{tel:+44 12 2538 4539}{+44 12 2538 4539}}
+
+\end{resume}
+\end{document}
+
+% Local Variables:
+% mode: latex
+% End:
