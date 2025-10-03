@@ -51,9 +51,10 @@
 
 % Generate a PDF TOC
 \let\oldsection\section
-\def\section#1{\oldsection{#1}%
-\phantomsection%
-\addcontentsline{toc}{section}{#1}%
+\def\section#1{%
+    \oldsection{#1}%
+    \phantomsection%
+    \addcontentsline{toc}{section}{#1}%
 }
 
 % The above seems to screw up the spacing for sections that start with lists...
@@ -80,68 +81,78 @@ United Kingdom
 \section{Education}
 
 \textbf{PhD, Mathematics,} University of Southampton, UK
-\hfill \textbf{Sep. 2021}\\
+\hfill \textbf{Sep. 2021} \\
 \vspace*{-.1in}
 \begin{itemize}
-    \item[ ] Advisor: Prof\ Nils Andersson
-    \item[ ] Thesis title:
-\href{https://eprints.soton.ac.uk/452900/}%
-{\textit{Gravitational waves from deformed neutron stars: mountains and tides}}
+    \item[] Advisor: Prof Nils Andersson
+    %
+    \item[] Thesis title:
+    \href{https://eprints.soton.ac.uk/452900/}%
+    {\textit{Gravitational waves from deformed neutron stars: mountains and tides}}
 \end{itemize}
 
 \textbf{MSci, Physics,} University of Birmingham, UK
-\hfill \textbf{Jul. 2017}\\
+\hfill \textbf{Jul. 2017} \\
 \vspace*{-.1in}
 \begin{itemize}
-    \item[ ] Grade: First class honours
-    \item[ ] Undergraduate Master's degree with focus on theoretical physics
+    \item[] Grade: First class honours
+    %
+    \item[] Undergraduate Master's degree with focus on theoretical physics
 \end{itemize}
 
 \section{Research Experience}
 
 \textbf{Marie Sk{\l}odowska-Curie Postdoctoral Fellow,} Utrecht University, NL
-\hfill \textbf{Oct. 2024--Present}\\
+\hfill \textbf{Oct. 2024--Present} \\
 \\
 \textbf{Research Fellow,} University of Southampton, UK
-\hfill \textbf{Oct. 2021--Sep. 2024}\\
+\hfill \textbf{Oct. 2021--Sep. 2024} \\
 \\
 \textbf{PhD Researcher,} University of Southampton, UK
-\hfill \textbf{Sep. 2017--Sep. 2024}\\
+\hfill \textbf{Sep. 2017--Sep. 2024} \\
 \\
 \textbf{Undergraduate Researcher,} University of Birmingham, UK
-\hfill \textbf{Sep. 2016--Mar. 2017}\\
+\hfill \textbf{Sep. 2016--Mar. 2017} \\
 \\
 \textbf{Undergraduate Researcher,} University of Birmingham, UK
-\hfill \textbf{Jan.--May 2016}\\
+\hfill \textbf{Jan.--May 2016} \\
 \\
 \textbf{Undergraduate Research Intern,} University of Birmingham, UK
-\hfill \textbf{Jun.--Sep. 2015}\\
+\hfill \textbf{Jun.--Sep. 2015} \\
 
 % Added to improve page breaks
 \vspace{-1em}
 
 \section{Research Interests}
 
-Relativistic astrophysics, fluid dynamics and dense nuclear matter. Probing
-the extreme physics of neutron stars with gravitational waves.
+Relativistic astrophysics, gravitational-wave astronomy and the extreme physics
+of neutron stars.
+One major theme is building predictive, physically faithful neutron-star models
+with realistic microphysics and dynamics.
+A second major theme is using gravitational waves to extract this physics and
+constrain dense nuclear matter.
+Currently, I advance gravitational-wave asteroseismology to probe dense-matter
+physics through the modelling and detection of neutron-star oscillation modes.
 
 \section{Grants and Awards}
 
-\textbf{Marie Sk{\l}odowska-Curie Postdoctoral Fellow,} European Union
+\textbf{Marie Sk{\l}odowska-Curie Postdoctoral Fellowship,} European Union
 \hfill \textbf{Oct. 2024--Sep. 2026}\vspace*{.05in}
 \begin{itemize}
-    \item[ ] PI of
+    \item[] Project lead of
     \href{https://doi.org/10.3030/101151301}{\textit{DynTideEOS}}; €203,464
 \end{itemize}
 \textbf{Gravitational Physics Thesis Prize,} Institute of Physics, UK
-\hfill \textbf{2021}\\
+\hfill \textbf{2021} \\
 \\
 \textbf{Best Publication in Gravitational Physics,}
 University of Southampton, UK
-\hfill \textbf{2021}\\
+\hfill \textbf{2021} \\
 \\
 \textbf{Physics Scholarship,} University of Birmingham, UK
-\hfill \textbf{2013}\\
+\hfill \textbf{2013} \\
+
+\newpage
 
 \input{TalksContent.tex}
 
@@ -153,33 +164,38 @@ University of Southampton, UK
 \textbf{Instructor,} University of Southampton, UK
 \vspace*{.05in}
 \begin{itemize}
-    \item[ ] MATH1007/1009, Mathematical Methods for Physical Scientists
+    \item[] MATH1007/1009, Mathematical Methods for Physical Scientists
 \hfill \textbf{Feb.--May 2024}
 \end{itemize}
 %\newpage{}
 \textbf{Guest Lecturer,} University of Southampton, UK
 \vspace*{.05in}
 \begin{itemize}
-    \item[ ] MATH3072, Advanced Fluid Dynamics
+    \item[] MATH3072, Advanced Fluid Dynamics
 \hfill \textbf{Oct. 2022, Oct. 2023}
-    \item[ ] MATH3006, Relativity, Black Holes and Cosmology
+    \item[] MATH3006, Relativity, Black Holes and Cosmology
 \hfill \textbf{Apr. 2022}
 \end{itemize}
 \textbf{Teaching Assistant,} University of Southampton, UK
 \hfill \textbf{Oct. 2017--May 2021}
 \begin{itemize}
-    \item[ ] MATH1054/1055, Mathematics for Engineering and the Environment
-    \item[ ] MATH1057, Dynamics and Relativity
-    \item[ ] MATH1058, Operational Research I and Mathematical Computing
-    \item[ ] MATH2045, Vector Calculus and Complex Variable Theory
-    \item[ ] MATH3018, Numerical Methods
-    \item[ ] MATH3087, Maths and Your Future
+    \item[] MATH1054/1055, Mathematics for Engineering and the Environment
+    %
+    \item[] MATH1057, Dynamics and Relativity
+    %
+    \item[] MATH1058, Operational Research I and Mathematical Computing
+    %
+    \item[] MATH2045, Vector Calculus and Complex Variable Theory
+    %
+    \item[] MATH3018, Numerical Methods
+    %
+    \item[] MATH3087, Maths and Your Future
 \end{itemize}
 \textbf{Teaching Assistant,} King Edward's School, Birmingham, UK
 \hfill \textbf{Jan.--Apr. 2016}
 \vspace*{.05in}
 \begin{itemize}
-    \item[ ] Physics (11--16 yr)
+    \item[] Physics (11--16 yr)
 \end{itemize}
 
 \section{Mentoring and Supervision}
@@ -188,16 +204,21 @@ University of Southampton, UK
 \begin{itemize}
     \item[] Thibeau Wouters, Utrecht University, NL
     \hfill \textbf{Oct. 2024--Present}
+    %
     \item[] Rahime Matur, University of Southampton, UK
     \hfill \textbf{Jan. 2023--Sep. 2024}
+    %
     \item[] Rhys Counsell, University of Southampton, UK
     \hfill \textbf{Sep. 2021--Sep. 2024}
+    %
     \item[] Shanshan Yin, University of Southampton, UK
     \hfill \textbf{Sep. 2021--Sep. 2024}
+    %
     \item[] Thomas Celora, University of Southampton, UK
     \hfill \textbf{Sep. 2021--Sep. 2023}
+    %
     \begin{itemize}
-    \vspace{-.05in}
+        \vspace{-.05in}
         \item[] Now postdoc at Institute of Space Sciences, Barcelona, ES
     \end{itemize}
 \end{itemize}
@@ -237,18 +258,21 @@ University of Southampton, UK
     \item[]
     \href{https://sites.google.com/view/spins-uk-2024}{SPINS-UK 2024 meeting},
     University of Southampton
-    \hfill \textbf{10--12 Sep. 2024}\\
+    \hfill \textbf{10--12 Sep. 2024} \\
     \hspace*{1em} Local organising committee, $\sim 40$ participants
+    %
     \item[]
     \href{https://plan.events.mpg.de/event/133}%
     {Continuous gravitational waves and neutron stars workshop}, \\
     Albert Einstein Institute, Hannover, DE \hfill \textbf{17--20 Jun. 2024}\\
     \hspace*{1em} Scientific organising committee, $\sim 50$ participants
+    %
     \item[]
     \href{https://iop.eventsair.com/gpm2024/}%
     {Gravitational Physics Annual Meeting},
     Institute of Physics, UK \hfill \textbf{18 Jan. 2024} \\
     \hspace*{1em} Scientific organising committee, $\sim 50$ participants
+    %
     \item[]
     \href{https://sites.google.com/view/britgrav23}{23rd BritGrav Conference},
     University of Southampton, UK \hfill \textbf{13--14 Apr. 2023} \\
@@ -261,12 +285,13 @@ University of Southampton, UK
 \begin{itemize}
     \item[] Gravity Seminar, University of Southampton, UK
     \hfill \textbf{Oct. 2021--Sep. 2024}
+    %
     \item[] Weekly Gravity Reading Group, University of Southampton, UK
     \hfill \textbf{Jan.--Jul. 2021}
 \end{itemize}
 
 \textbf{Journal referee}
-\vspace*{.05in}\\
+\vspace*{.05in} \\
 \hspace*{1em}
 Astronomy and Astrophysics,
 Classical and Quantum Gravity,
@@ -281,31 +306,83 @@ The Astrophysical Journal
 \textbf{Project referee}
 \vspace*{.05in}
 \begin{itemize}
-    \item[ ]
-    Postdoctoral project, University of Namur, BE
-    \hfill \textbf{2025}
-    \item[ ]
-    Open Fellowship, Engineering and Physical Sciences Research Council, UK
-    \hfill \textbf{2024}
+    \item[] Postdoctoral project, University of Namur, BE \hfill \textbf{2025}
+    %
+    \item[] Open Fellowship,
+    Engineering and Physical Sciences Research Council, UK \hfill \textbf{2024}
 \end{itemize}
 
 \textbf{Outreach}
 \vspace*{.05in}
 \begin{itemize}
-  \item[] Southampton Science and Engineering Festival
-  \hfill \textbf{7 May 2022, 18 Mar. 2023} \\
-  \hspace*{1em} Organised neutron-star exhibit for general public and
-  coordinated team of 10 volunteers
-  \item[] Mathematical Challenge \hfill \textbf{Mar.--Apr. 2020} \\
-  \hspace*{1em} Marked over 200 pupil entries
-  \item[] Maths and Physics Workshop \hfill \textbf{8 Nov. 2017} \\
-  \hspace*{1em} Demonstrated for $\sim 100$ secondary-school pupils
+    \item[] Southampton Science and Engineering Festival
+    \hfill \textbf{7 May 2022, 18 Mar. 2023} \\
+    \hspace*{1em} Organised neutron-star exhibit for general public and
+    coordinated team of 10 volunteers
+    %
+    \item[] Mathematical Challenge \hfill \textbf{Mar.--Apr. 2020} \\
+    \hspace*{1em} Marked over 200 pupil entries
+    %
+    \item[] Maths and Physics Workshop \hfill \textbf{8 Nov. 2017} \\
+    \hspace*{1em} Demonstrated for $\sim 100$ secondary-school pupils
+\end{itemize}
+
+\textbf{Press (selected)}
+\vspace*{.05in}
+\begin{itemize}
+    \item[]
+    \href{https://www.ntvn.nl/2025/10/sporen-van-quarkmaterie-zwaartekrachtgolven/}%
+    {\textit{Sporen van quarkmaterie in zwaartekrachtgolven?}}
+    \hfill \textbf{1 Oct. 2025} \\
+    Nederlands Tijdschrift voor Natuurkunde
+    %
+    \item[]
+    \href{https://www.newscientist.com/article/2343788-lightest-neutron-star-ever-found-could-contain-compressed-quarks/}%
+    {\textit{Lightest neutron star ever found could contain compressed quarks}},
+    New Scientist \hfill \textbf{24 Oct. 2022}
+    %
+    \item[]
+    \href{https://www.livescience.com/millimeter-tall-neutron-star-mountains.html}%
+    {\textit{Neutron star `mountains' may be blocking our view of mysterious gravitational}}
+    \hfill \textbf{21 Jul. 2021} \\
+    \href{https://www.livescience.com/millimeter-tall-neutron-star-mountains.html}%
+    {\textit{waves}}, Live Science
+    %
+    \item[]
+    \href{https://www.theregister.com/2021/07/21/mountain_neutron_stars/}%
+    {\textit{Mountains on neutron stars are not even a millimetre tall due to extreme}}
+    \hfill \textbf{21 Jul. 2021} \\
+    \href{https://www.theregister.com/2021/07/21/mountain_neutron_stars/}%
+    {\textit{gravity}}, The Register
+    %
+    \item[]
+    \href{https://www.independent.co.uk/space/neutron-stars-mountains-ligo-virgo-b1886426.html}%
+    {\textit{Scientists find tiny mountains on neutron stars that are a fraction of a}}
+    \hfill \textbf{19 Jul. 2021} \\
+    \href{https://www.independent.co.uk/space/neutron-stars-mountains-ligo-virgo-b1886426.html}%
+    {\textit{millimetre tall}}, The Independent
+    %
+    \item[]
+    \href{https://gizmodo.com/neutron-stars-have-mountains-that-are-less-than-a-milli-1847309049}%
+    {\textit{Neutron Stars Have Mountains That Are Less Than a Millimeter Tall}},
+    Gizmodo \hfill \textbf{18 Jul. 2021}
+    %
+    \item[]
+    \href{https://www.newscientist.com/article/2278363-neutron-stars-are-remarkably-smooth-thanks-to-their-intense-gravity/}%
+    {\textit{Neutron stars are remarkably smooth thanks to their intense gravity}},
+    \hfill \textbf{24 May 2021} \\
+    New Scientist
+    %
+    \item[]
+    \href{https://astrobites.org/2018/11/16/ns_breakup/}%
+    {\textit{Why don’t they just break up?}}
+    Astrobites \hfill \textbf{16 Nov. 2018}
 \end{itemize}
 
 \section{Computer Skills}
 
 Advanced in Julia, Python.
-Intermediate in Bash, C++, \textsc{Mathematica}, MATLAB.
+Intermediate in Bash, C++, Mathematica, MATLAB.
 Intermediate in high-performance computing (HTCondor, Slurm).
 Markup languages: \LaTeX, Markdown.
 
@@ -313,7 +390,7 @@ Markup languages: \LaTeX, Markdown.
 Most contributions can be found at \url{https://github.com/fgittins}.
 Member of the \textit{Bilby} development team
 (\url{https://github.com/bilby-dev/bilby}).
-Contributor to \textit{SciML} (\url{https://sciml.ai/}),
+Contributor to \textit{SciML} (\url{https://sciml.ai}),
 in particular \texttt{NonlinearSolve.jl}
 (\url{https://github.com/SciML/NonlinearSolve.jl}).
 Author of \texttt{RealisticSeismology} Julia code
@@ -342,6 +419,7 @@ Southampton, SO17 1BJ \\
 United Kingdom \\
 email: \href{mailto:n.a.andersson@soton.ac.uk}{n.a.andersson@soton.ac.uk} \\
 office phone: \href{tel:+44 23 8059 4551}{+44 23 8059 4551}}
+%
 \par
 \parbox{\textwidth}{%
 \textbf{Prof Chris van den Broeck,} Professor of Physics \\
@@ -352,6 +430,7 @@ Princetonplein 1 \\
 The Netherlands \\
 email: \href{mailto:c.f.f.vandenbroeck@uu.nl}{c.f.f.vandenbroeck@uu.nl} \\
 office phone: \href{tel:+31 6 25 13 3968}{+31 6 25 13 3968}}
+%
 \par
 \parbox{\textwidth}{%
 \textbf{Dr David Tsang,} Lecturer in Physics \\
