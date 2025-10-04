@@ -1,30 +1,28 @@
 \let\nofiles\relax % This is because res says to not emit aux files,
                    % but lastpage needs aux files.
+
 \documentclass[%
     margin,
     line,
+    11pt,
 ]{res}
-\usepackage[colorlinks=true]{hyperref}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{microtype}
-\usepackage{fourier-orns}
-\usepackage{amsmath,amssymb}
-\usepackage{lastpage}
-\usepackage{fancyhdr}
-\usepackage{etaremune}
-\usepackage[normalem]{ulem}
-\usepackage[style=iso]{datetime2}
 
-\oddsidemargin -.5in
-\evensidemargin -.5in
+\usepackage[style=iso]{datetime2}
+\usepackage{etaremune}
+\usepackage{fancyhdr}
+\usepackage[T1]{fontenc}
+\usepackage{fourier-orns}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{lastpage}
+\usepackage{microtype}
+\usepackage{newtxtext,newtxmath}
+
+\newsectionwidth{1.5in}
+
+\oddsidemargin -0.5in
 \voffset -25pt
-%\topmargin -.2in
 \headsep 25pt
-\textwidth=6.0in
-\textheight=8.9in
-\itemsep=0in
-\parsep=0in
+\textwidth 6.0in
 
 % Headings
 \pagestyle{fancy}
@@ -34,8 +32,6 @@
 \lfoot{}
 \cfoot{}
 \rfoot{}
-\renewcommand{\headrulewidth}{0.4pt}
-%\renewcommand{\footrulewidth}{0.4pt}
 
 % Give hyperref some metadata
 \hypersetup{%
@@ -66,7 +62,7 @@
 \newlength{\mynamewidth}
 \settowidth{\mynamewidth}{\namefont\myname}
 
-\name{\hspace*{0.5\textwidth}\hspace{-0.5\mynamewidth} \myname \vspace*{.1in}}
+\name{\hspace*{0.5\textwidth}\hspace{-0.5\mynamewidth} \myname \vspace*{0.1in}}
 % On the first page, have no header.
 \thispagestyle{empty}
 
@@ -82,7 +78,7 @@ United Kingdom
 
 \textbf{PhD, Mathematics,} University of Southampton, UK
 \hfill \textbf{Sep. 2021} \\
-\vspace*{-.1in}
+\vspace*{-0.1in}
 \begin{itemize}
     \item[] Advisor: Prof Nils Andersson
     %
@@ -90,10 +86,10 @@ United Kingdom
     \href{https://eprints.soton.ac.uk/452900/}%
     {\textit{Gravitational waves from deformed neutron stars: mountains and tides}}
 \end{itemize}
-
+%
 \textbf{MSci, Physics,} University of Birmingham, UK
 \hfill \textbf{Jul. 2017} \\
-\vspace*{-.1in}
+\vspace*{-0.1in}
 \begin{itemize}
     \item[] Grade: First class honours
     %
@@ -131,17 +127,18 @@ One major theme is building predictive, physically faithful neutron-star models
 with realistic microphysics and dynamics.
 A second major theme is using gravitational waves to extract this physics and
 constrain dense nuclear matter.
-Currently, I advance gravitational-wave asteroseismology to probe dense-matter
+Currently, advancing gravitational-wave asteroseismology to probe dense-matter
 physics through the modelling and detection of neutron-star oscillation modes.
 
 \section{Grants and Awards}
 
 \textbf{Marie Sk{\l}odowska-Curie Postdoctoral Fellowship,} European Union
-\hfill \textbf{Oct. 2024--Sep. 2026}\vspace*{.05in}
+\hfill \textbf{Oct. 2024--Sep. 2026}\vspace*{0.05in}
 \begin{itemize}
     \item[] Project lead of
-    \href{https://doi.org/10.3030/101151301}{\textit{DynTideEOS}}; €203,464
+    \href{https://doi.org/10.3030/101151301}{\textit{DynTideEOS}}; \eurologo 203,464
 \end{itemize}
+%
 \textbf{Gravitational Physics Thesis Prize,} Institute of Physics, UK
 \hfill \textbf{2021} \\
 \\
@@ -156,26 +153,24 @@ University of Southampton, UK
 
 \input{TalksContent.tex}
 
-% Added to improve page breaks
-%\vspace{-1em}
-
 \section{Teaching Experience}
 
 \textbf{Instructor,} University of Southampton, UK
-\vspace*{.05in}
+\vspace*{0.05in}
 \begin{itemize}
     \item[] MATH1007/1009, Mathematical Methods for Physical Scientists
 \hfill \textbf{Feb.--May 2024}
 \end{itemize}
-%\newpage{}
+%
 \textbf{Guest Lecturer,} University of Southampton, UK
-\vspace*{.05in}
+\vspace*{0.05in}
 \begin{itemize}
     \item[] MATH3072, Advanced Fluid Dynamics
 \hfill \textbf{Oct. 2022, Oct. 2023}
     \item[] MATH3006, Relativity, Black Holes and Cosmology
 \hfill \textbf{Apr. 2022}
 \end{itemize}
+%
 \textbf{Teaching Assistant,} University of Southampton, UK
 \hfill \textbf{Oct. 2017--May 2021}
 \begin{itemize}
@@ -191,9 +186,10 @@ University of Southampton, UK
     %
     \item[] MATH3087, Maths and Your Future
 \end{itemize}
+%
 \textbf{Teaching Assistant,} King Edward's School, Birmingham, UK
 \hfill \textbf{Jan.--Apr. 2016}
-\vspace*{.05in}
+\vspace*{0.05in}
 \begin{itemize}
     \item[] Physics (11--16 yr)
 \end{itemize}
@@ -218,34 +214,38 @@ University of Southampton, UK
     \hfill \textbf{Sep. 2021--Sep. 2023}
     %
     \begin{itemize}
-        \vspace{-.05in}
+        \vspace{-0.05in}
         \item[] Now postdoc at Institute of Space Sciences, Barcelona, ES
     \end{itemize}
 \end{itemize}
+%
 \textbf{Master's student supervision}
 \begin{itemize}
     \item[] Tobie Walraven, Utrecht University, NL
     \hfill \textbf{Sep. 2025--Present}
 \end{itemize}
 
-%
-%\newpage{}
-
 \section{Professional Activities, Outreach and Service}
 
 \textbf{Virgo Collaboration, Member} \hfill \textbf{Oct. 2024--Present} \\
+%
 \textbf{Cosmic Explorer Consortium, Member} \hfill \textbf{May 2024--Present} \\
+%
 \textbf{Einstein Telescope Collaboration, Member}
 \hfill \textbf{Sep. 2023--Present}
 
 \textbf{International Astronomical Union, Junior member}
 \hfill \textbf{May 2023--Present} \\
+%
 \textbf{European Astronomical Society, Member}
 \hfill \textbf{Nov. 2024--Present} \\
+%
 \textbf{Royal Astronomical Society, Elected fellow}
 \hfill \textbf{Jul. 2021--Present} \\
+%
 \textbf{International Society on General Relativity and Gravitation,} \\
 \textbf{Lifetime member} \hfill \textbf{May 2021--Present} \\
+%
 \textbf{Institute of Physics, Member} \hfill \textbf{Apr. 2021--Present}
 \begin{itemize}
     \item[] Gravitational Physics Group, Committee member
@@ -253,7 +253,7 @@ University of Southampton, UK
 \end{itemize}
 
 \textbf{Conference organiser}
-\vspace*{.05in}
+\vspace*{0.05in}
 \begin{itemize}
     \item[]
     \href{https://sites.google.com/view/spins-uk-2024}{SPINS-UK 2024 meeting},
@@ -281,7 +281,7 @@ University of Southampton, UK
 \end{itemize}
 
 \textbf{Seminar organiser}
-\vspace*{.05in}
+\vspace*{0.05in}
 \begin{itemize}
     \item[] Gravity Seminar, University of Southampton, UK
     \hfill \textbf{Oct. 2021--Sep. 2024}
@@ -291,7 +291,7 @@ University of Southampton, UK
 \end{itemize}
 
 \textbf{Journal referee}
-\vspace*{.05in} \\
+\vspace*{0.05in} \\
 \hspace*{1em}
 Astronomy and Astrophysics,
 Classical and Quantum Gravity,
@@ -304,7 +304,7 @@ Physical Review Letters,
 The Astrophysical Journal
 
 \textbf{Project referee}
-\vspace*{.05in}
+\vspace*{0.05in}
 \begin{itemize}
     \item[] Postdoctoral project, University of Namur, BE \hfill \textbf{2025}
     %
@@ -313,7 +313,7 @@ The Astrophysical Journal
 \end{itemize}
 
 \textbf{Outreach}
-\vspace*{.05in}
+\vspace*{0.05in}
 \begin{itemize}
     \item[] Southampton Science and Engineering Festival
     \hfill \textbf{7 May 2022, 18 Mar. 2023} \\
@@ -328,7 +328,7 @@ The Astrophysical Journal
 \end{itemize}
 
 \textbf{Press (selected)}
-\vspace*{.05in}
+\vspace*{0.05in}
 \begin{itemize}
     \item[]
     \href{https://www.ntvn.nl/2025/10/sporen-van-quarkmaterie-zwaartekrachtgolven/}%
@@ -375,7 +375,7 @@ The Astrophysical Journal
     %
     \item[]
     \href{https://astrobites.org/2018/11/16/ns_breakup/}%
-    {\textit{Why don’t they just break up?}}
+    {\textit{Why don't they just break up?}}
     Astrobites \hfill \textbf{16 Nov. 2018}
 \end{itemize}
 
@@ -396,20 +396,15 @@ in particular \texttt{NonlinearSolve.jl}
 Author of \texttt{RealisticSeismology} Julia code
 (\url{https://github.com/fgittins/RealisticSeismology}).
 
-% Twiddle this for spacing
-% \newpage
-
 \ifx\nopubs\undefined
 \input{PubsContent.tex}
 \else
 %
 \fi
 
-%\newpage{}
-
 \section{References}
 
-\vspace*{.05in}
+\vspace*{0.05in}
 \parbox{\textwidth}{%
 \textbf{Prof Nils Andersson,} Professor of Applied Mathematics \\
 School of Mathematical Sciences \\
@@ -419,8 +414,8 @@ Southampton, SO17 1BJ \\
 United Kingdom \\
 email: \href{mailto:n.a.andersson@soton.ac.uk}{n.a.andersson@soton.ac.uk} \\
 office phone: \href{tel:+44 23 8059 4551}{+44 23 8059 4551}}
-%
 \par
+%
 \parbox{\textwidth}{%
 \textbf{Prof Chris van den Broeck,} Professor of Physics \\
 Institute of Gravitational and Subatomic Physics \\
@@ -430,8 +425,8 @@ Princetonplein 1 \\
 The Netherlands \\
 email: \href{mailto:c.f.f.vandenbroeck@uu.nl}{c.f.f.vandenbroeck@uu.nl} \\
 office phone: \href{tel:+31 6 25 13 3968}{+31 6 25 13 3968}}
-%
 \par
+%
 \parbox{\textwidth}{%
 \textbf{Dr David Tsang,} Lecturer in Physics \\
 Department of Physics \\
