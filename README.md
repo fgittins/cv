@@ -6,4 +6,4 @@
 
 # Fabian Gittins's Curriculum Vitae LaTeX source
 
-This repository is a derivative work of Leo C. Stein's CV repository, which can be found at https://github.com/duetosymmetry/cv and uses `res.cls`. Full credit to the original authors.
+This repository is a derivative work of Leo C. Stein's CV repository, which can be found at https://github.com/duetosymmetry/cv and uses the [resumé class](https://ctan.org/pkg/res). Full credit to the original authors.
