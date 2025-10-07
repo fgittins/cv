@@ -1,0 +1,210 @@
+\let\nofiles\relax % This is because res says to not emit aux files,
+                   % but lastpage needs aux files.
+
+\documentclass[%
+    margin,
+    line,
+    11pt,
+]{res}
+
+\usepackage[style=iso]{datetime2}
+\usepackage{etaremune}
+\usepackage{fancyhdr}
+\usepackage[T1]{fontenc}
+\usepackage{fourier-orns}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{lastpage}
+\usepackage{microtype}
+\usepackage{newtxtext}
+
+\newsectionwidth{1.5in}
+
+\oddsidemargin -0.5in
+\voffset -25pt
+\headsep 25pt
+\textwidth 6.0in
+
+% Headings
+\pagestyle{fancy}
+\lhead{Fabian Gittins --- Curriculum Vitae (as of \today)}
+\chead{}
+\rhead{\thepage\ of \pageref*{LastPage}}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+% Give hyperref some metadata
+\hypersetup{%
+    pdftitle={Fabian Gittins — Curriculum Vitae (CV)},
+    pdfauthor={Fabian Gittins},
+    pdfsubject={Fabian Gittins's academic curriculum vitae (CV)},
+    pdfkeywords={physics, gravity, general relativity, neutron stars,
+    gravitational waves, asteroseismology}
+}
+
+% I want small caps for the section style
+\def\sectionfont{\sc}
+
+% Generate a PDF TOC
+\let\oldsection\section
+\def\section#1{%
+    \oldsection{#1}%
+    \phantomsection%
+    \addcontentsline{toc}{section}{#1}%
+}
+
+% The above seems to screw up the spacing for sections that start with lists...
+\newcommand{\secstartswithlist}{\leavevmode \vspace{-\baselineskip}}
+
+\begin{document}
+
+\newcommand{\myname}{Fabian Gittins}
+\newlength{\mynamewidth}
+\settowidth{\mynamewidth}{\namefont\myname}
+
+\name{\hspace*{0.5\textwidth}\hspace{-0.5\mynamewidth} \myname \vspace*{0.1in}}
+% On the first page, have no header.
+\thispagestyle{empty}
+
+\begin{resume}
+
+\input{ContactContent.tex}
+
+\section{Citizenship}
+
+United Kingdom
+
+\section{Research Interests}
+
+Relativistic astrophysics, gravitational-wave astronomy and the extreme physics
+of neutron stars.
+
+\section{Education}
+
+\textbf{PhD, Mathematics,} University of Southampton, UK
+\hfill \textbf{Sep 2021} \\
+\vspace*{-0.1in}
+\begin{itemize}
+    \item[] Advisor: Prof Nils Andersson
+    %
+    \item[] Thesis title:
+    \href{https://eprints.soton.ac.uk/452900/}%
+    {\textit{Gravitational waves from deformed neutron stars: mountains and tides}}
+\end{itemize}
+%
+\textbf{MSci, Physics,} University of Birmingham, UK
+\hfill \textbf{Jul 2017} \\
+\vspace*{-0.1in}
+\begin{itemize}
+    \item[] Grade: First class honours
+    %
+    \item[] Undergraduate Master's degree with focus on theoretical physics
+\end{itemize}
+
+\section{Research Experience}
+
+\textbf{Marie Sk{\l}odowska-Curie Postdoctoral Fellow,} Utrecht University, NL
+\hfill \textbf{Oct 2024--Present} \\
+\\
+\textbf{Research Fellow,} University of Southampton, UK
+\hfill \textbf{Oct 2021--Sep 2024} \\
+\\
+\textbf{PhD Researcher,} University of Southampton, UK
+\hfill \textbf{Sep 2017--Sep 2021} % \\
+% \\
+% \textbf{Undergraduate Researcher,} University of Birmingham, UK
+% \hfill \textbf{Sep 2016--Mar 2017} \\
+% \\
+% \textbf{Undergraduate Researcher,} University of Birmingham, UK
+% \hfill \textbf{Jan--May 2016} \\
+% \\
+% \textbf{Undergraduate Research Intern,} University of Birmingham, UK
+% \hfill \textbf{Jun--Sep 2015}
+
+\section{Honours and Awards}
+
+\textbf{Marie Sk{\l}odowska-Curie Postdoctoral Fellowship,} European Union
+\hfill \textbf{Oct 2024--Sep 2026}\vspace*{0.05in}
+\begin{itemize}
+    \item[] Project lead of
+    \href{https://doi.org/10.3030/101151301}{\textit{DynTideEOS}}; \eurologo 203,464
+\end{itemize}
+%
+\textbf{Gravitational Physics Thesis Prize,} Institute of Physics, UK
+\hfill \textbf{2021} \\
+\\
+\textbf{Best Publication in Gravitational Physics,}
+University of Southampton, UK
+\hfill \textbf{2021} \\
+\\
+\textbf{Physics Scholarship,} University of Birmingham, UK
+\hfill \textbf{2013}
+
+\ifx\nopubs\undefined
+\input{PubsContent-Abridged.tex}
+\else
+%
+\fi
+
+\input{TalksContent-Abridged.tex}
+
+\section{Teaching Experience, Mentoring and Supervision}
+
+\textbf{Guest Lecturer,} University of Southampton, UK
+\hfill \textbf{Apr 2022, Oct 2022, Oct 2023} \\
+\\
+\textbf{Teaching Assistant,} University of Southampton, UK
+\hfill \textbf{Oct 2017--May 2021} \\
+\\
+\textbf{PhD student mentoring}
+\begin{itemize}
+    \item[] Thibeau Wouters, Utrecht University, NL
+    \hfill \textbf{Oct 2024--Present}
+    %
+    \item[] Rahime Matur, University of Southampton, UK
+    \hfill \textbf{Jan 2023--Sep 2024}
+    %
+    \item[] Rhys Counsell, University of Southampton, UK
+    \hfill \textbf{Sep 2021--Sep 2024}
+    %
+    \item[] Shanshan Yin, University of Southampton, UK
+    \hfill \textbf{Sep 2021--Sep 2024}
+    %
+    \item[] Thomas Celora, University of Southampton, UK
+    \hfill \textbf{Sep 2021--Sep 2023}
+    %
+    \begin{itemize}
+        \vspace{-0.05in}
+        \item[] Now postdoc at Institute of Space Sciences, Barcelona, ES
+    \end{itemize}
+\end{itemize}
+%
+\textbf{Master's student supervision}
+\begin{itemize}
+    \item[] Tobie Walraven, Utrecht University, NL
+    \hfill \textbf{Sep 2025--Present}
+\end{itemize}
+
+\section{Computer Skills}
+
+Advanced in Julia, Python.
+Intermediate in Bash, C++, Mathematica, MATLAB.
+Intermediate in high-performance computing (HTCondor, Slurm).
+Markup languages: \LaTeX, Markdown.
+
+\textbf{Software---}%
+Most contributions can be found at \url{https://github.com/fgittins}.
+Member of the \textit{Bilby} development team
+(\url{https://github.com/bilby-dev/bilby}).
+Contributor to \textit{SciML} (\url{https://sciml.ai}),
+in particular \texttt{NonlinearSolve.jl}
+(\url{https://github.com/SciML/NonlinearSolve.jl}).
+Author of \texttt{RealisticSeismology} Julia code
+(\url{https://github.com/fgittins/RealisticSeismology}).
+
+\end{resume}
+\end{document}
+
+% Local Variables:
+% mode: latex
+% End:
