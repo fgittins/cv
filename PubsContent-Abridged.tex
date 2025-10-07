@@ -1,0 +1,114 @@
+\newcommand{\arxiv}[1]{[\href{http://arxiv.org/abs/#1}{arXiv:#1}]}
+\def\zero{0}
+\def\one{1}
+\newcommand{\citeCount}[1]{%
+    \def\val{#1}
+    \ifx\val\zero%
+    \else%
+        \ifx\val\one%
+        (1~citation)%
+        \else%
+        (#1~citations)%
+        \fi%
+    \fi
+}
+
+% Comment out to show, uncomment to hide
+% \renewcommand{\citeCount}[1]{}
+
+\def\apj{Astrophys.\ J.}
+\def\mnras{Mon.\ Not.\ R.\ Astron.\ Soc.}
+\def\prd{Phys.\ Rev.\ D}
+
+\newcounter{numPubs}
+\newcounter{pubCounter}
+
+\setcounter{numPubs}{24}
+\setcounter{pubCounter}{\value{numPubs}}
+
+% \section{Publications in Progress}
+% \secstartswithlist{}%
+% \begin{etaremune}[start=\value{pubCounter}]
+% \item
+%   McNees,~R.
+%   {\bf Stein,~L.~C.},
+%   (2019)
+%   {\it Cosmological perturbations in dynamical Chern-Simons}.
+%   \setcounter{pubCounter}{\value{enumi}}
+% \end{etaremune}
+
+%%%%%%%%%%
+%%%%%%%%%%
+%%%%%%%%%%
+%%%%%%%%%%
+\newif\ifshowpubsummary
+%%% Comment out the next line to omit the publication summary
+\showpubsummarytrue
+%%%
+\ifshowpubsummary
+\section{Publication Summary}
+
+Full list of publications can be found on
+\href{https://scholar.google.com/citations?hl=en&user=jET8KxgAAAAJ}%
+{Google Scholar},
+\href{https://inspirehep.net/authors/1798261}%
+{INSPIRE-HEP}
+and
+\href{https://ui.adsabs.harvard.edu/user/libraries/SDMGXaKoRomaOJsefpo2yQ}%
+{NASA ADS}.
+
+\textbf{h-index---}%
+As of 2025-10-03: 12 (according to Google Scholar),
+11 (according to INSPIRE-HEP)
+or 10 (according to NASA ADS).
+
+\textbf{Top five cited---}%
+Excluding long-author papers.
+Citation counts from Google Scholar.
+\begin{enumerate}
+    \item \textbf{Gittins, F.}, Andersson, N., Jones, D.~I.,
+    \textit{Modelling neutron star mountains},
+    \href{https://doi.org/10.1093/mnras/staa3635}%
+    {\mnras\ \textbf{500}, 5570 (2021)}
+    \arxiv{2009.12794}.
+    \citeCount{71}
+    %
+    \item \textbf{Gittins, F.}, Andersson, N.,
+    \textit{Modelling neutron star mountains in relativity},
+    \href{https://doi.org/10.1093/mnras/stab2048}%
+    {\mnras\ \textbf{507}, 116 (2021)}
+    \arxiv{2105.06493}.
+    \citeCount{58}
+    %
+    \item \textbf{Gittins, F.}, Andersson, N., Pereira, J.~P.,
+    \textit{Tidal deformations of neutron stars with elastic crusts},
+    \href{https://doi.org/10.1103/PhysRevD.101.103025}%
+    {\prd\ \textbf{101}, 103025 (2020)}
+    \arxiv{2003.05449}.
+    \citeCount{45}
+    %
+    \item \textbf{Gittins, F.}, Andersson, N.,
+    \textit{Tidal deformations of hybrid stars with sharp phase transitions and
+    elastic crusts},
+    \href{https://doi.org/10.3847/1538-4357/ab8aca}%
+    {\apj\ \textbf{895}, 28 (2020)}
+    \arxiv{2003.10781}.
+    \citeCount{37}
+    %
+    \item \textbf{Gittins, F.}, Andersson, N.,
+    \textit{Population synthesis of accreting neutron stars emitting
+    gravitational waves},
+    \href{https://doi.org/10.1093/mnras/stz1719}%
+    {\mnras\ \textbf{488}, 99 (2019)}
+    \arxiv{1811.00550}.
+    \citeCount{31}
+\end{enumerate}
+\else% don't show pub summary
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Local Variables:
+% mode: latex
+% TeX-master: "FabianGittins-Abridged.tex"
+% End:
