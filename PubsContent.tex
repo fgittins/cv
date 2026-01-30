@@ -27,7 +27,7 @@
 \newcounter{numPubs}
 \newcounter{pubCounter}
 
-\setcounter{numPubs}{25}
+\setcounter{numPubs}{26}
 \setcounter{pubCounter}{\value{numPubs}}
 
 %%%%%%%%%%
@@ -286,6 +286,21 @@ Citation counts from Google Scholar.
     {\mnras\ \textbf{488}, 99 (2019)}
     \arxiv{1811.00550}.
     \citeCount{31}
+    %
+    \setcounter{pubCounter}{\value{enumi}}
+\end{etaremune}
+
+\section{White Papers}
+
+\secstartswithlist{}%
+\addtocounter{pubCounter}{-1}%
+\begin{etaremune}[start=\value{pubCounter}]
+    \renewcommand\labelenumi{[\theenumi]}
+    %
+    \item Dietrich, T. \textit{et al.},
+    \textit{ESO Expanding Horizon White Paper: Revealing the properties of matter at supranuclear densities with gravitational waves},
+    \arxiv{2512.16971}.
+    \citeCount{0}
     %
     \setcounter{pubCounter}{\value{enumi}}
 \end{etaremune}
