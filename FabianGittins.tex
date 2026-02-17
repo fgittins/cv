@@ -69,7 +69,7 @@
 % On the first page, have no header.
 \thispagestyle{empty}
 
-\input{ContactContent.tex}
+\input{content/ContactInformation.tex}
 
 \section{Citizenship}
 
@@ -86,27 +86,7 @@ constrain dense nuclear matter.
 Currently, advancing gravitational-wave asteroseismology to probe dense-matter
 physics through modelling and detection of neutron-star oscillation modes.
 
-\section{Education}
-
-\textbf{PhD, Mathematics,} University of Southampton, UK
-\hfill \textbf{Sep 2021} \\
-\vspace*{-0.1in}
-\begin{itemize}
-    \item[] Advisor: Prof Nils Andersson
-    %
-    \item[] Thesis title:
-    \href{https://eprints.soton.ac.uk/452900/}%
-    {\textit{Gravitational waves from deformed neutron stars: mountains and tides}}
-\end{itemize}
-%
-\textbf{MSci, Physics,} University of Birmingham, UK
-\hfill \textbf{Jul 2017} \\
-\vspace*{-0.1in}
-\begin{itemize}
-    \item[] Grade: First class honours
-    %
-    \item[] Undergraduate Master's degree with focus on theoretical physics
-\end{itemize}
+\input{content/Education.tex}
 
 \section{Research Experience}
 
@@ -128,35 +108,18 @@ physics through modelling and detection of neutron-star oscillation modes.
 % \textbf{Undergraduate Research Intern,} University of Birmingham, UK
 % \hfill \textbf{Jun--Sep 2015}
 
-\section{Honours and Awards}
-
-\textbf{Marie Sk{\l}odowska-Curie Postdoctoral Fellowship,} European Union
-\hfill \textbf{Oct 2024--Sep 2026}\vspace*{0.05in}
-\begin{itemize}
-    \item[] Project lead of
-    \href{https://doi.org/10.3030/101151301}{\textit{DynTideEOS}}; \eurologo 203,464
-\end{itemize}
-%
-\textbf{Gravitational Physics Thesis Prize,} Institute of Physics, UK
-\hfill \textbf{2021} \\
-\\
-\textbf{Best Publication in Gravitational Physics,}
-University of Southampton, UK
-\hfill \textbf{2021} \\
-\\
-\textbf{Physics Scholarship,} University of Birmingham, UK
-\hfill \textbf{2013}
+\input{content/HonoursAndAwards.tex}
 
 \newpage
 
 \ifx\nopubs\undefined
-\input{PubsContent.tex}
+\input{content/Publications.tex}
 \newpage
 \else
 %
 \fi
 
-\input{TalksContent.tex}
+\input{content/Talks.tex}
 
 \section{Teaching Experience}
 
@@ -230,8 +193,6 @@ University of Southampton, UK
     \hfill \textbf{Sep 2025--Jan 2026}
 \end{itemize}
 
-\newpage
-
 \section{Professional Activities, Outreach and Service}
 
 \textbf{Virgo Collaboration, Member} \hfill \textbf{Oct 2024--Present} \\
@@ -258,6 +219,8 @@ University of Southampton, UK
     \item[] Gravitational Physics Group, Committee member
     \hfill \textbf{Oct 2021--Sep 2025}
 \end{itemize}
+
+\newpage
 
 \textbf{Conference organiser}
 \vspace*{0.05in}
@@ -319,8 +282,6 @@ The Astrophysical Journal
     Engineering and Physical Sciences Research Council, UK \hfill \textbf{2024}
 \end{itemize}
 
-\newpage
-
 \textbf{Outreach}
 \vspace*{0.05in}
 \begin{itemize}
@@ -335,6 +296,8 @@ The Astrophysical Journal
     \item[] Maths and Physics Workshop \hfill \textbf{8 Nov 2017} \\
     \hspace*{1em} Demonstrated for $\sim 100$ secondary-school pupils
 \end{itemize}
+
+\newpage
 
 \textbf{Press (selected)}
 \vspace*{0.05in}
@@ -388,59 +351,9 @@ The Astrophysical Journal
     Astrobites \hfill \textbf{16 Nov 2018}
 \end{itemize}
 
-\section{Computer Skills}
+\input{content/ComputerSkills.tex}
 
-Advanced in Julia, Python.
-Intermediate in Bash, C++, Mathematica, MATLAB.
-Intermediate in high-performance computing (HTCondor, Slurm).
-Markup languages: \LaTeX, Markdown.
-
-\textbf{Software---}%
-Most contributions can be found at \url{https://github.com/fgittins}.
-Member of the \textit{Bilby} development team
-(\url{https://github.com/bilby-dev/bilby}).
-Contributor to \textit{SciML} (\url{https://sciml.ai}),
-in particular \texttt{NonlinearSolve.jl}
-(\url{https://github.com/SciML/NonlinearSolve.jl}).
-Author of \texttt{RealisticSeismology} Julia code
-(\url{https://github.com/fgittins/RealisticSeismology}).
-
-\newpage
-
-\section{References}
-
-\vspace*{0.05in}
-\parbox{\textwidth}{%
-\textbf{Prof Nils Andersson,} Professor of Applied Mathematics \\
-School of Mathematical Sciences \\
-University of Southampton \\
-University Road \\
-Southampton, SO17 1BJ \\
-United Kingdom \\
-email: \href{mailto:n.a.andersson@soton.ac.uk}{n.a.andersson@soton.ac.uk} \\
-office phone: \href{tel:+44 23 8059 4551}{+44 23 8059 4551}}
-\par
-%
-\parbox{\textwidth}{%
-\textbf{Prof Chris van den Broeck,} Professor of Physics \\
-Institute for Gravitational and Subatomic Physics \\
-Utrecht University \\
-Princetonplein 1 \\
-3584 CC Utrecht \\
-The Netherlands \\
-email: \href{mailto:c.f.f.vandenbroeck@uu.nl}{c.f.f.vandenbroeck@uu.nl} \\
-office phone: \href{tel:+31 6 25 13 3968}{+31 6 25 133 968}}
-\par
-%
-\parbox{\textwidth}{%
-\textbf{Dr David Tsang,} Lecturer in Physics \\
-Department of Physics \\
-University of Bath \\
-Claverton Down \\
-Bath, BA2 7AY \\
-United Kingdom \\
-email: \href{mailto:d.tsang@bath.ac.uk}{d.tsang@bath.ac.uk} \\
-office phone: \href{tel:+44 12 2538 4539}{+44 12 2538 4539}}
+\input{content/References.tex}
 
 \end{resume}
 \end{document}
