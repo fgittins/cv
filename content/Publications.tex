@@ -19,6 +19,7 @@
 \def\apj{Astrophys.\ J.}
 \def\apjs{Astrophys.\ J.\ Suppl.\ Ser.}
 \def\cqg{Class.\ Quantum\ Gravity}
+\def\jcap{J.\ Cosmol.\ Astropart.\ Phys.}
 \def\joss{J.\ Open\ Source\ Softw.}
 \def\mnras{Mon.\ Not.\ R.\ Astron.\ Soc.}
 \def\prd{Phys.\ Rev.\ D}
@@ -27,7 +28,7 @@
 \newcounter{numPubs}
 \newcounter{pubCounter}
 
-\setcounter{numPubs}{26}
+\setcounter{numPubs}{27}
 \setcounter{pubCounter}{\value{numPubs}}
 
 %%%%%%%%%%
@@ -50,21 +51,21 @@ Citation counts from Google Scholar.
     \href{https://doi.org/10.1093/mnras/staa3635}%
     {\mnras\ \textbf{500}, 5570 (2021)}
     \arxiv{2009.12794}.
-    \citeCount{72}
+    \citeCount{78}
     %
     \item \textbf{Gittins, F.}, Andersson, N.,
     \textit{Modelling neutron star mountains in relativity},
     \href{https://doi.org/10.1093/mnras/stab2048}%
     {\mnras\ \textbf{507}, 116 (2021)}
     \arxiv{2105.06493}.
-    \citeCount{59}
+    \citeCount{62}
     %
     \item \textbf{Gittins, F.}, Andersson, N., Pereira, J.~P.,
     \textit{Tidal deformations of neutron stars with elastic crusts},
     \href{https://doi.org/10.1103/PhysRevD.101.103025}%
     {\prd\ \textbf{101}, 103025 (2020)}
     \arxiv{2003.05449}.
-    \citeCount{47}
+    \citeCount{48}
     %
     \item \textbf{Gittins, F.}, Andersson, N.,
     \textit{Tidal deformations of hybrid stars with sharp phase transitions and
@@ -72,7 +73,7 @@ Citation counts from Google Scholar.
     \href{https://doi.org/10.3847/1538-4357/ab8aca}%
     {\apj\ \textbf{895}, 28 (2020)}
     \arxiv{2003.10781}.
-    \citeCount{38}
+    \citeCount{39}
     %
     \item \textbf{Gittins, F.}, Andersson, N.,
     \textit{Population synthesis of accreting neutron stars emitting
@@ -87,35 +88,35 @@ Citation counts from Google Scholar.
 
 \renewcommand{\citeCount}[1]{}
 
-\section{Submitted Publications}
+% \section{Submitted Publications}
 
-\secstartswithlist{}%
+% \secstartswithlist{}%
+% % \addtocounter{pubCounter}{-1}%
+% \begin{etaremune}[start=\value{pubCounter}]
+%     \renewcommand\labelenumi{[\theenumi]}
+%     %
+%     \item Andersson, N., Counsell, A.~R., \textbf{Gittins, F.}, Ghosh, S.,
+%     \textit{The tidal response of a relativistic star}
+%     \arxiv{2511.05139}.
+%     \citeCount{0}
+%     %
+%     \setcounter{pubCounter}{\value{enumi}}
+% \end{etaremune}
+
+% \section{Accepted Publications}
+
+% \secstartswithlist{}%
 % \addtocounter{pubCounter}{-1}%
-\begin{etaremune}[start=\value{pubCounter}]
-    \renewcommand\labelenumi{[\theenumi]}
-    %
-    \item Andersson, N., Counsell, A.~R., \textbf{Gittins, F.}, Ghosh, S.,
-    \textit{The tidal response of a relativistic star}
-    \arxiv{2511.05139}.
-    \citeCount{0}
-    %
-    \setcounter{pubCounter}{\value{enumi}}
-\end{etaremune}
-
-\section{Accepted Publications}
-
-\secstartswithlist{}%
-\addtocounter{pubCounter}{-1}%
-\begin{etaremune}[start=\value{pubCounter}]
-    \renewcommand\labelenumi{[\theenumi]}
-    %
-    \item Abac, A. \textit{et al.},
-    \textit{The Science of the Einstein Telescope}
-    \arxiv{2503.12263}.
-    \citeCount{68}
-    %
-    \setcounter{pubCounter}{\value{enumi}}
-\end{etaremune}
+% \begin{etaremune}[start=\value{pubCounter}]
+%     \renewcommand\labelenumi{[\theenumi]}
+%     %
+%     \item Abac, A. \textit{et al.},
+%     \textit{The Science of the Einstein Telescope}
+%     \arxiv{2503.12263}.
+%     \citeCount{68}
+%     %
+%     \setcounter{pubCounter}{\value{enumi}}
+% \end{etaremune}
 
 % \section{Collaboration Publications}
 % From 2008--2012, I was coauthor on 34 refereed LIGO and/or LIGO/Virgo
@@ -128,19 +129,33 @@ Citation counts from Google Scholar.
 \begin{etaremune}[start=\value{pubCounter}]
     \renewcommand\labelenumi{[\theenumi]}
     %
+    \item Andersson, N., Counsell, A.~R., \textbf{Gittins, F.}, Ghosh, S.,
+    \textit{Tidal response of a relativistic star},
+    \href{https://doi.org/10.1103/x4yr-x1c4}%
+    {\prd\ \textbf{113}, 064051 (2026)}
+    \arxiv{2511.05139}.
+    \citeCount{0}
+    %
+    \item Abac, A. \textit{et al.},
+    \textit{The Science of the Einstein Telescope},
+    \href{https://doi.org/10.1088/1475-7516/2026/03/081}%
+    {\jcap\ \textbf{03} (2026) 081}
+    \arxiv{2503.12263}.
+    \citeCount{129}
+    %
     \item Yin, S., Andersson, N., \textbf{Gittins, F.},
     \textit{A post-Newtonian approach to neutron star oscillations},
     \href{https://doi.org/10.1088/1361-6382/ae1c16}%
     {\cqg\ \textbf{42}, 235002 (2025)}
     \arxiv{2504.06918}.
-    \citeCount{3}
+    \citeCount{4}
     %
     \item Pnigouras, P., Andersson, N., \textbf{Gittins, F.}, Counsell, A.~R.,
     \textit{Dynamical neutron star tides: the signature of a mode resonance},
     \href{https://doi.org/10.1093/mnras/staf1285}%
     {\mnras\ \textbf{542}, 1375 (2025)}
     \arxiv{2508.06416}.
-    \citeCount{2}
+    \citeCount{3}
     %
     \item Counsell, A.~R., \textbf{Gittins, F.} \textit{et al.},
     \textit{Interface modes in inspiralling neutron stars: A gravitational-wave
@@ -148,14 +163,14 @@ Citation counts from Google Scholar.
     \href{https://doi.org/10.1103/8hvq-6dy7}%
     {\prl\ \textbf{135}, 081402 (2025)}
     \arxiv{2504.06181}.
-    \citeCount{9}
+    \citeCount{15}
     %
     \item \textbf{Gittins, F.}, Andersson, N., Yin, S.,
     \textit{Perturbation theory for post-Newtonian neutron stars},
     \href{https://doi.org/10.1088/1361-6382/ade83f}%
     {\cqg\ \textbf{42}, 135014 (2025)}
     \arxiv{2503.03345}.
-    \citeCount{3}
+    \citeCount{5}
     %
     \item \textbf{Gittins, F.}, Andersson, N.,
     \textit{Neutron-star seismology with realistic, finite-temperature nuclear
@@ -163,35 +178,35 @@ Citation counts from Google Scholar.
     \href{https://doi.org/10.1103/PhysRevD.111.083024}%
     {\prd\ \textbf{111}, 083024 (2025)}
     \arxiv{2406.05177}.
-    \citeCount{5}
+    \citeCount{8}
     %
     \item \textbf{Gittins, F.} \textit{et al.},
     \textit{Problematic systematics in neutron-star merger simulations},
     \href{https://doi.org/10.1103/PhysRevD.111.023049}%
     {\prd\ \textbf{111}, 023049 (2025)}
     \arxiv{2409.13468}.
-    \citeCount{11}
+    \citeCount{14}
     %
     \item Counsell, A.~R., \textbf{Gittins, F.} \textit{et al.},
     \textit{Neutron star g modes in the relativistic Cowling approximation},
     \href{https://doi.org/10.1093/mnras/stae2721}%
     {\mnras\ \textbf{536}, 1967 (2025)}
     \arxiv{2409.20178}.
-    \citeCount{9}
+    \citeCount{12}
     %
     \item Counsell, A.~R., \textbf{Gittins, F.}, Andersson, N.,
     \textit{The impact of nuclear reactions on the neutron-star g-mode spectrum},
     \href{https://doi.org/10.1093/mnras/stae1242}%
     {\mnras\ \textbf{531}, 1721 (2024)}
     \arxiv{2310.13586}.
-    \citeCount{11}
+    \citeCount{12}
     %
     \item Pnigouras, P., \textbf{Gittins, F.}, \textit{et al.},
     \textit{The dynamical tides of spinning Newtonian stars},
     \href{https://doi.org/10.1093/mnras/stad3593}%
     {\mnras\ \textbf{527}, 8409 (2024)}
     \arxiv{2205.07577}.
-    \citeCount{18}
+    \citeCount{19}
     %
     \item Beri, A. \textit{et al.},
     \textit{AstroSat and NuSTAR observations of XTE J1739-285 during the
@@ -199,7 +214,7 @@ Citation counts from Google Scholar.
     \href{https://doi.org/10.1093/mnras/stad902}%
     {\mnras\ \textbf{521}, 5904 (2023)}
     \arxiv{2303.13085}.
-    \citeCount{10}
+    \citeCount{12}
     %
     \item \textbf{Gittins, F.} \textit{et al.},
     \textit{Modelling Neutron-Star Ocean Dynamics},
@@ -213,14 +228,14 @@ Citation counts from Google Scholar.
     \href{https://doi.org/10.1093/mnras/stad672}%
     {\mnras\ \textbf{521}, 3043 (2023)}
     \arxiv{2212.04892}.
-    \citeCount{16}
+    \citeCount{20}
     %
     \item Andersson, N., \textbf{Gittins, F.},
     \textit{Formulating the r-mode Problem for Slowly Rotating Neutron Stars},
     \href{https://doi.org/10.3847/1538-4357/acbc1e}%
     {\apj\ \textbf{945}, 139 (2023)}
     \arxiv{2212.04837}.
-    \citeCount{13}
+    \citeCount{14}
     %
     \item Andersson, N., \textbf{Gittins, F.} \textit{et al.},
     \textit{Building post-Newtonian neutron stars},
@@ -234,28 +249,28 @@ Citation counts from Google Scholar.
     \href{https://doi.org/10.3847/1538-4365/ac416c}%
     {\apjs\ \textbf{258}, 34 (2022)}
     \arxiv{2109.10352}.
-    \citeCount{153}
+    \citeCount{188}
     %
     \item \textbf{Gittins, F.}, Andersson, N.,
     \textit{Modelling neutron star mountains in relativity},
     \href{https://doi.org/10.1093/mnras/stab2048}%
     {\mnras\ \textbf{507}, 116 (2021)}
     \arxiv{2105.06493}.
-    \citeCount{59}
+    \citeCount{62}
     %
     \item \textbf{Gittins, F.}, Andersson, N., Jones, D.~I.,
     \textit{Modelling neutron star mountains},
     \href{https://doi.org/10.1093/mnras/staa3635}%
     {\mnras\ \textbf{500}, 5570 (2021)}
     \arxiv{2009.12794}.
-    \citeCount{72}
+    \citeCount{78}
     %
     \item \textbf{Gittins, F.}, Andersson, N., Pereira, J.~P.,
     \textit{Tidal deformations of neutron stars with elastic crusts},
     \href{https://doi.org/10.1103/PhysRevD.101.103025}%
     {\prd\ \textbf{101}, 103025 (2020)}
     \arxiv{2003.05449}.
-    \citeCount{47}
+    \citeCount{48}
     %
     \item \textbf{Gittins, F.}, Andersson, N.,
     \textit{Tidal deformations of hybrid stars with sharp phase transitions and
@@ -263,7 +278,7 @@ Citation counts from Google Scholar.
     \href{https://doi.org/10.3847/1538-4357/ab8aca}%
     {\apj\ \textbf{895}, 28 (2020)}
     \arxiv{2003.10781}.
-    \citeCount{38}
+    \citeCount{39}
     %
     \item \textbf{Gittins, F.}, Andersson, N.,
     \textit{Population synthesis of accreting neutron stars emitting
@@ -286,7 +301,7 @@ Citation counts from Google Scholar.
     \item Dietrich, T. \textit{et al.},
     \textit{ESO Expanding Horizon White Paper: Revealing the properties of matter at supranuclear densities with gravitational waves},
     \arxiv{2512.16971}.
-    \citeCount{0}
+    \citeCount{1}
     %
     \setcounter{pubCounter}{\value{enumi}}
 \end{etaremune}
@@ -319,7 +334,7 @@ Citation counts from Google Scholar.
     \textit{COMPAS: A rapid binary population synthesis suite},
     \href{https://doi.org/10.21105/joss.03838}%
     {\joss\ \textbf{7}, 3838 (2022)}.
-    \citeCount{20}
+    \citeCount{24}
     %
     \setcounter{pubCounter}{\value{enumi}}
 \end{etaremune}
