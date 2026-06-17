@@ -20,9 +20,9 @@ jobs:
         run: |
           git checkout --orphan gh-action-result/pdflatex
           git rm -rf .
-          git add FabianGittins.pdf
-          git add FabianGittins-PubsOnly.pdf
-          git add FabianGittins-NoPubs.pdf
+          git add build/FabianGittins.pdf
+          git add build/FabianGittins-PubsOnly.pdf
+          git add build/FabianGittins-NoPubs.pdf
           git -c user.name='GitHub Action' -c user.email='action@github.com' commit -m "Built paper"
       - name: Push changes
         uses: ad-m/github-push-action@master
