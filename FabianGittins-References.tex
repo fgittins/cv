@@ -5,6 +5,7 @@
     margin,
     line,
     11pt,
+    % a4paper,
 ]{res}
 
 \usepackage[style=iso]{datetime2}
@@ -58,7 +59,7 @@
 \newlength{\mynamewidth}
 \settowidth{\mynamewidth}{\namefont\myname}
 
-\name{\hspace*{0.5\textwidth}\hspace{-0.5\mynamewidth} \myname \vspace*{0.1in}}
+\name{\hspace*{0.5\textwidth}\hspace{-0.5\mynamewidth} \strut \myname \vspace*{0.1in}}
 
 \begin{document}
 \begin{resume}
