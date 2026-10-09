@@ -43,7 +43,6 @@
 \ifshowpubsummary
 \input{content/PublicationSummary.tex}
 
-\vspace*{-0.075in}
 \textbf{Top five cited---}%
 Excluding long-author-list papers.
 Citation counts according to Google Scholar.
@@ -98,7 +97,6 @@ I list only non-collaboration articles below.
 \section{Submitted Publications}
 
 \secstartswithlist{}%
-% \addtocounter{pubCounter}{-1}%
 \begin{etaremune}[start=\value{pubCounter}]
     \renewcommand\labelenumi{[\theenumi]}
     %
@@ -143,6 +141,7 @@ I list only non-collaboration articles below.
 \section{Refereed Publications}
 
 \textbf{Research articles}
+%
 \vspace*{0.05in}
 \addtocounter{pubCounter}{-1}%
 \begin{etaremune}[start=\value{pubCounter}]
@@ -283,8 +282,10 @@ I list only non-collaboration articles below.
     \setcounter{pubCounter}{\value{enumi}}
 \end{etaremune}
 
-\vspace*{-0.1in}
+\begin{samepage}
+%
 \textbf{Review articles}
+%
 \vspace*{0.05in}
 \addtocounter{pubCounter}{-1}%
 \begin{etaremune}[start=\value{pubCounter}]
@@ -298,9 +299,11 @@ I list only non-collaboration articles below.
     %
     \setcounter{pubCounter}{\value{enumi}}
 \end{etaremune}
+%
+\end{samepage}
 
-% \vspace*{-0.1in}
 \textbf{Software articles}
+%
 \vspace*{0.05in}
 \addtocounter{pubCounter}{-1}%
 \begin{etaremune}[start=\value{pubCounter}]
@@ -314,8 +317,8 @@ I list only non-collaboration articles below.
     \setcounter{pubCounter}{\value{enumi}}
 \end{etaremune}
 
-\vspace*{-0.1in}
 \textbf{Conference proceedings}
+%
 \vspace*{0.05in}
 \addtocounter{pubCounter}{-1}%
 \begin{etaremune}[start=\value{pubCounter}]
