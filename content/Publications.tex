@@ -29,10 +29,32 @@
 
 \newcounter{numPubs}
 \newcounter{pubCounter}
+\newcounter{pubTotal}
 
-% TODO: Update for each new publication
-\setcounter{numPubs}{29}
-\setcounter{pubCounter}{\value{numPubs}}
+% The number of publications is counted on each run and saved to the aux file
+% for the next one (like lastpage), so a rerun is needed when it changes
+\makeatletter
+\@ifundefined{cv@numpubs}{}{\setcounter{numPubs}{\cv@numpubs}}
+\AtEndDocument{%
+    \immediate\write\@auxout{\gdef\string\cv@numpubs{\the\c@pubTotal}}%
+    \ifnum\c@pubTotal=\c@numPubs\else
+        \@latex@warning@no@line{Number of publications has changed.
+        Rerun to get the numbering right}%
+    \fi
+}
+\makeatother
+\setcounter{pubCounter}{\numexpr\value{numPubs}+1\relax}
+
+% Reverse-numbered publication list, continuing from the previous one
+\newenvironment{publist}{%
+    \addtocounter{pubCounter}{-1}%
+    \begin{etaremune}[start=\value{pubCounter}]%
+    \renewcommand\labelenumi{[\theenumi]}%
+}{%
+    \setcounter{pubCounter}{\value{enumi}}%
+    \addtocounter{pubTotal}{\value{EM@itemctr}}%
+    \end{etaremune}%
+}
 
 %%%%%%%%%%
 %%%%%%%%%%
@@ -99,9 +121,7 @@ I list only non-collaboration articles below.
 \section{Submitted Publications}
 
 \secstartswithlist{}%
-\begin{etaremune}[start=\value{pubCounter}]
-    \renewcommand\labelenumi{[\theenumi]}
-    %
+\begin{publist}
     \item Wouters, T., Ng, T.~C.~K., Koehn, H., \fgittins,
     (3 more authors),
     \textit{Scalable and sequential inference of the neutron star equation of
@@ -114,36 +134,26 @@ I list only non-collaboration articles below.
     universal relations and equilibrium solutions}
     \arxiv{2607.07943}
     (submitted to \prd).
-    %
-    \setcounter{pubCounter}{\value{enumi}}
-\end{etaremune}
+\end{publist}
 
 \section{Accepted Publications}
 
 \secstartswithlist{}%
-\addtocounter{pubCounter}{-1}%
-\begin{etaremune}[start=\value{pubCounter}]
-    \renewcommand\labelenumi{[\theenumi]}
-    %
+\begin{publist}
     \item \fgittins, Narola, H., Wouters, T., Pang, P.~T.~H.,
     Hinderer, T., Van Den Broeck, C.,
     \textit{Detecting tidal resonances in binary neutron stars},
     \href{https://doi.org/10.1103/51xv-gfy9}%
     {\prl}
     \arxiv{2606.06376}.
-    %
-    \setcounter{pubCounter}{\value{enumi}}
-\end{etaremune}
+\end{publist}
 
 \section{Refereed Publications}
 
 \textbf{Research articles}
 %
 \vspace*{0.05in}
-\addtocounter{pubCounter}{-1}%
-\begin{etaremune}[start=\value{pubCounter}]
-    \renewcommand\labelenumi{[\theenumi]}
-    %
+\begin{publist}
     \item Negri, L., (8 authors), \fgittins, (6 more authors),
     \textit{Impact of the Einstein Telescope's duty cycle on the estimation of
     binary black holes parameters},
@@ -282,73 +292,51 @@ I list only non-collaboration articles below.
     \href{https://doi.org/10.1093/mnras/stz1719}%
     {\mnras\ \textbf{488}, 99 (2019)}
     \arxiv{1811.00550}.
-    %
-    \setcounter{pubCounter}{\value{enumi}}
-\end{etaremune}
+\end{publist}
 
 \begin{samepage}
 %
 \textbf{Review articles}
 %
 \vspace*{0.05in}
-\addtocounter{pubCounter}{-1}%
-\begin{etaremune}[start=\value{pubCounter}]
-    \renewcommand\labelenumi{[\theenumi]}
-    %
+\begin{publist}
     \item \fgittins,
     \textit{Gravitational waves from neutron-star mountains},
     \href{https://doi.org/10.1088/1361-6382/ad1c35}%
     {\cqg\ \textbf{41}, 043001 (2024)}
     \arxiv{2401.01670}.
-    %
-    \setcounter{pubCounter}{\value{enumi}}
-\end{etaremune}
+\end{publist}
 %
 \end{samepage}
 
 \textbf{Software articles}
 %
 \vspace*{0.05in}
-\addtocounter{pubCounter}{-1}%
-\begin{etaremune}[start=\value{pubCounter}]
-    \renewcommand\labelenumi{[\theenumi]}
-    %
+\begin{publist}
     \item Riley, J., (6 authors), \fgittins, (16 more authors),
     \textit{COMPAS: A rapid binary population synthesis suite},
     \href{https://doi.org/10.21105/joss.03838}%
     {\joss\ \textbf{7}, 3838 (2022)}.
-    %
-    \setcounter{pubCounter}{\value{enumi}}
-\end{etaremune}
+\end{publist}
 
 \textbf{Conference proceedings}
 %
 \vspace*{0.05in}
-\addtocounter{pubCounter}{-1}%
-\begin{etaremune}[start=\value{pubCounter}]
-    \renewcommand\labelenumi{[\theenumi]}
-    %
+\begin{publist}
     \item Thomas, A., Stevenson, E., \fgittins, (5 more authors),
     \textit{Galactic archaeology with TESS: Prospects for testing the star
     formation history in the solar neighbourhood},
     \href{https://doi.org/10.1051/epjconf/201716005006}%
     {EPJ\ Web\ Conf.\ \textbf{160}, 05006 (2017)}
     \arxiv{1610.08862}.
-    %
-    \setcounter{pubCounter}{\value{enumi}}
-\end{etaremune}
+\end{publist}
 
 \section{White Papers}
 
 \secstartswithlist{}%
-\addtocounter{pubCounter}{-1}%
-\begin{etaremune}[start=\value{pubCounter}]
-    \renewcommand\labelenumi{[\theenumi]}
-    %
+\begin{publist}
     \item Dietrich, T., (19 authors), \fgittins, (22 more authors),
     \textit{ESO Expanding Horizon White Paper: Revealing the properties of
     matter at supranuclear densities with gravitational waves}
     \arxiv{2512.16971}.
-    %
-    \setcounter{pubCounter}{\value{enumi}}
-\end{etaremune}
+\end{publist}
