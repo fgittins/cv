@@ -1,0 +1,75 @@
+% Shared preamble for all CV documents.
+%
+% Before \input-ing this file, define \myname. Optionally define any of
+% \cvheader, \cvpdftitle, \cvpdfsubject or \cvpdfkeywords to override the
+% defaults below.
+
+\let\nofiles\relax % This is because res says to not emit aux files,
+                   % but lastpage needs aux files.
+
+\documentclass[%
+    margin,
+    line,
+    11pt,
+    % a4paper,
+]{res}
+
+\providecommand{\cvheader}{Curriculum Vitae (as of \today)}
+\providecommand{\cvpdftitle}{Fabian Gittins — Curriculum Vitae (CV)}
+\providecommand{\cvpdfsubject}{Fabian Gittins's academic curriculum vitae (CV)}
+\providecommand{\cvpdfkeywords}{physics, gravity, general relativity, neutron
+stars, gravitational waves, asteroseismology}
+
+\usepackage[style=iso]{datetime2}
+\usepackage{enumitem}
+\usepackage{etaremune}
+\usepackage{fancyhdr}
+\usepackage[T1]{fontenc}
+\usepackage{fourier-orns}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{lastpage}
+\usepackage{microtype}
+\usepackage{newtxtext}
+
+\newsectionwidth{1.2in}
+
+\oddsidemargin -0.25in
+\voffset -25pt
+\headsep 25pt
+\textwidth 5.8in
+
+% Headings
+\pagestyle{fancy}
+\lhead{Fabian Gittins --- \cvheader}
+\chead{}
+\rhead{\thepage\ of \pageref*{LastPage}}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+% Give hyperref some metadata
+\hypersetup{%
+    pdftitle={\cvpdftitle},
+    pdfauthor={Fabian Gittins},
+    pdfsubject={\cvpdfsubject},
+    pdfkeywords={\cvpdfkeywords}
+}
+
+% I want small caps for the section style
+\def\sectionfont{\scshape}
+
+% Generate a PDF TOC
+\let\oldsection\section
+\def\section#1{%
+    \oldsection{#1}%
+    \phantomsection%
+    \addcontentsline{toc}{section}{#1}%
+}
+
+% The above seems to screw up the spacing for sections that start with lists...
+\newcommand{\secstartswithlist}{\leavevmode \vspace{-\baselineskip}}
+
+\newlength{\mynamewidth}
+\settowidth{\mynamewidth}{\namefont\myname}
+
+\name{\hspace*{0.5\textwidth}\hspace{-0.5\mynamewidth} \strut \myname \vspace*{0.1in}}

@@ -1,67 +1,6 @@
-\let\nofiles\relax % This is because res says to not emit aux files,
-                   % but lastpage needs aux files.
-
-\documentclass[%
-    margin,
-    line,
-    11pt,
-    % a4paper,
-]{res}
-
-\usepackage[style=iso]{datetime2}
-\usepackage{etaremune}
-\usepackage{fancyhdr}
-\usepackage[T1]{fontenc}
-\usepackage{fourier-orns}
-\usepackage[colorlinks=true]{hyperref}
-\usepackage{lastpage}
-\usepackage{microtype}
-\usepackage{newtxtext}
-
-\newsectionwidth{1.2in}
-
-\oddsidemargin -0.25in
-\voffset -25pt
-\headsep 25pt
-\textwidth 5.8in
-
-% Headings
-\pagestyle{fancy}
-\lhead{Fabian Gittins --- Publication List (as of \today)}
-\chead{}
-\rhead{\thepage\ of \pageref*{LastPage}}
-\lfoot{}
-\cfoot{}
-\rfoot{}
-
-% Give hyperref some metadata
-\hypersetup{%
-    pdftitle={Fabian Gittins — Curriculum Vitae (CV)},
-    pdfauthor={Fabian Gittins},
-    pdfsubject={Fabian Gittins's academic curriculum vitae (CV)},
-    pdfkeywords={physics, gravity, general relativity, neutron stars,
-    gravitational waves, asteroseismology}
-}
-
-% I want small caps for the section style
-\def\sectionfont{\scshape}
-
-% Generate a PDF TOC
-\let\oldsection\section
-\def\section#1{%
-    \oldsection{#1}%
-    \phantomsection%
-    \addcontentsline{toc}{section}{#1}%
-}
-
-% The above seems to screw up the spacing for sections that start with lists...
-\newcommand{\secstartswithlist}{\leavevmode \vspace{-\baselineskip}}
-
 \newcommand{\myname}{Fabian Gittins --- Publications}
-\newlength{\mynamewidth}
-\settowidth{\mynamewidth}{\namefont\myname}
-
-\name{\hspace*{0.5\textwidth}\hspace{-0.5\mynamewidth} \strut \myname \vspace*{.1in}}
+\newcommand{\cvheader}{Publication List (as of \today)}
+\input{content/Preamble.tex}
 
 \begin{document}
 \begin{resume}
