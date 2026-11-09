@@ -29,14 +29,28 @@ stars, gravitational waves, asteroseismology}
 \usepackage[colorlinks=true]{hyperref}
 \usepackage{lastpage}
 \usepackage{microtype}
-\usepackage{newtxtext,newtxmath}
+\usepackage{newtxtext}
+\usepackage[varg]{newtxmath}
 
+% Load geometry without the class options (it misreads `margin')
+\makeatletter
+\let\cv@classoptions\@classoptionslist
+\let\@classoptionslist\@empty
+\usepackage{geometry}
+\let\@classoptionslist\cv@classoptions
+\makeatother
+
+% Page margins
+\geometry{
+    hmargin=0.75in,
+    vmargin=1in,
+    headheight=13.6pt,
+    headsep=11.4pt,
+}
+
+% Split the text width into section-title column and body
+\setlength{\resumewidth}{\textwidth}
 \newsectionwidth{1.2in}
-
-\oddsidemargin -0.25in
-\voffset -25pt
-\headsep 25pt
-\textwidth 5.8in
 
 % Headings
 \pagestyle{fancy}
