@@ -1,9 +1,3 @@
-% Shared preamble for all CV documents.
-%
-% Before \input-ing this file, define \myname. Optionally define any of
-% \cvheader, \cvpdftitle, \cvpdfsubject or \cvpdfkeywords to override the
-% defaults below.
-
 \let\nofiles\relax % This is because res says to not emit aux files,
                    % but lastpage needs aux files.
 
@@ -29,7 +23,6 @@ stars, gravitational waves, asteroseismology}
 \usepackage[colorlinks=true]{hyperref}
 \usepackage{lastpage}
 \usepackage{microtype}
-\usepackage{multicol}
 \usepackage{newtxtext}
 \usepackage[varg]{newtxmath}
 
@@ -88,3 +81,12 @@ stars, gravitational waves, asteroseismology}
 \settowidth{\mynamewidth}{\namefont\myname}
 
 \name{\hspace*{0.5\textwidth}\hspace{-0.5\mynamewidth} \strut \myname \vspace*{0.1in}}
+
+\def\apj{Astrophys.\ J.}
+\def\apjs{Astrophys.\ J.\ Suppl.\ Ser.}
+\def\cqg{Class.\ Quantum\ Gravity}
+\def\jcap{J.\ Cosmol.\ Astropart.\ Phys.}
+\def\joss{J.\ Open\ Source\ Softw.}
+\def\mnras{Mon.\ Not.\ R.\ Astron.\ Soc.}
+\def\prd{Phys.\ Rev.\ D}
+\def\prl{Phys.\ Rev.\ Lett.}

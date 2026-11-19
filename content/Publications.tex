@@ -20,15 +20,6 @@
 
 \def\fgittins{\textbf{Gittins, F.}}
 
-\def\apj{Astrophys.\ J.}
-\def\apjs{Astrophys.\ J.\ Suppl.\ Ser.}
-\def\cqg{Class.\ Quantum\ Gravity}
-\def\jcap{J.\ Cosmol.\ Astropart.\ Phys.}
-\def\joss{J.\ Open\ Source\ Softw.}
-\def\mnras{Mon.\ Not.\ R.\ Astron.\ Soc.}
-\def\prd{Phys.\ Rev.\ D}
-\def\prl{Phys.\ Rev.\ Lett.}
-
 \newcounter{numPubs}
 \newcounter{pubCounter}
 \newcounter{pubTotal}
@@ -67,7 +58,19 @@
 \showpubsummarytrue
 %%%
 \ifshowpubsummary
-\input{content/PublicationSummary.tex}
+\section{Publication Summary}
+
+Full list of publications can be found on
+\href{https://scholar.google.com/citations?hl=en&user=jET8KxgAAAAJ}%
+{Google Scholar},
+\href{https://inspirehep.net/authors/1798261}%
+{INSPIRE-HEP}
+and
+\href{https://ui.adsabs.harvard.edu/user/libraries/SDMGXaKoRomaOJsefpo2yQ}%
+{NASA ADS}.
+
+\textbf{h-index---}%
+17 (according to Google Scholar) or 15 (according to INSPIRE-HEP, excluding collaboration papers).
 
 \textbf{Top five cited---}%
 Excluding long-author-list papers.
@@ -123,7 +126,6 @@ I advised.
 
 \section{Submitted Publications}
 
-\secstartswithlist{}%
 \begin{publist}
     \item \advisedStudent{}Wouters, T., Ng, T.~C.~K., Koehn, H., \fgittins,
     (3 more authors),
@@ -141,21 +143,14 @@ I advised.
 
 % \section{Accepted Publications}
 
-% \secstartswithlist{}%
 % \begin{publist}
-%     \item \fgittins, Narola, H., Wouters, T., Pang, P.~T.~H.,
-%     Hinderer, T., Van Den Broeck, C.,
-%     \textit{Detecting tidal resonances in binary neutron stars},
-%     \href{https://doi.org/10.1103/51xv-gfy9}%
-%     {\prl}
-%     \arxiv{2606.06376}.
+%     \item 
 % \end{publist}
 
 \section{Refereed Publications}
 
 \textbf{Research articles}
-%
-\vspace*{0.05in}
+
 \begin{publist}
     \item \fgittins, Narola, H., \advisedStudent{}Wouters, T., Pang, P.~T.~H.,
     Hinderer, T., Van Den Broeck, C.,
@@ -304,11 +299,8 @@ I advised.
     \arxiv{1811.00550}.
 \end{publist}
 
-\begin{samepage}
-%
 \textbf{Review articles}
-%
-\vspace*{0.05in}
+
 \begin{publist}
     \item \fgittins,
     \textit{Gravitational waves from neutron-star mountains},
@@ -316,12 +308,9 @@ I advised.
     {\cqg\ \textbf{41}, 043001 (2024)}
     \arxiv{2401.01670}.
 \end{publist}
-%
-\end{samepage}
 
 \textbf{Software articles}
-%
-\vspace*{0.05in}
+
 \begin{publist}
     \item Riley, J., (6 authors), \fgittins, (16 more authors),
     \textit{COMPAS: A rapid binary population synthesis suite},
@@ -330,8 +319,7 @@ I advised.
 \end{publist}
 
 \textbf{Conference proceedings}
-%
-\vspace*{0.05in}
+
 \begin{publist}
     \item Thomas, A., Stevenson, E., \fgittins, (5 more authors),
     \textit{Galactic archaeology with TESS: Prospects for testing the star
